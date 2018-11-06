@@ -1,0 +1,21 @@
+{
+  "name": "my-backend-app",
+  "version": "1.0.0",
+  "description": "A node.js RESTful API Tutorial Project (Build a simple Quote App)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "resful",
+    "api"
+  ],
+  "author": "Danish Lashari",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "rxjs-compat": "^6.3.3"
+  }
+}
