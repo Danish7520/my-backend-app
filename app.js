@@ -9,6 +9,7 @@ const app = express();
 //     });
 // });
 var qu = require("./Quotes.js");
+var d_quote;
 //console.log(qu);
 app.use(cors());
 app.get("/Random", (req, res, next) => {
@@ -16,8 +17,13 @@ app.get("/Random", (req, res, next) => {
   res.status(200).send(item);
 });
 app.get("/Daily", (req, res, next) => {
-  const today_date = new Date().getDate();
-  var d_quote = qu[today_date];
+  var today_date = new Date().getDate();
+
+  if (today_date == 6) {
+    today_date = 1;
+    d_quote = qu[today_date];
+    console.log("today's date", today_date);
+  }
 
   res.status(200).send(d_quote);
 });
